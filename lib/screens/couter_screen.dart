@@ -10,14 +10,6 @@ class CounterScreen extends StatefulWidget {
 }
 
 class _CounterScreenState extends State<CounterScreen> {
-  final CounterCubit _counterCubit = CounterCubit();
-
-  @override
-  void dispose() {
-    _counterCubit.close();
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,30 +20,25 @@ class _CounterScreenState extends State<CounterScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            BlocBuilder<CounterCubit, CounterState>(
-              bloc: _counterCubit,
-              builder: (context, state) {
-                return Text(
-                  state.value.toString(),
-                  style: const TextStyle(
-                    fontSize: 60.0,
-                  ),
-                );
-              },
+            Text(
+              context.watch<CounterCubit>().state.value.toString(),
+              style: const TextStyle(
+                fontSize: 60.0,
+              ),
             ),
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    _counterCubit.increment();
+                    context.read<CounterCubit>().increment();
                   },
                   child: const Text('+'),
                 ),
                 const SizedBox(width: 20),
                 ElevatedButton(
                   onPressed: () {
-                    _counterCubit.decrement();
+                    context.read<CounterCubit>().decrement();
                   },
                   child: const Text('-'),
                 ),
