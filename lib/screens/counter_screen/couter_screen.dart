@@ -1,3 +1,4 @@
+import 'package:demo_bloc_cubit/screens/counter_screen/cubit/color_cubit.dart';
 import 'package:demo_bloc_cubit/screens/counter_screen/cubit/counter_cubit.dart';
 import 'package:demo_bloc_cubit/screens/other_screen/other_screen.dart';
 import 'package:flutter/material.dart';
@@ -33,6 +34,7 @@ class _CounterScreenState extends State<CounterScreen> {
         }
       },
       child: Scaffold(
+        backgroundColor: context.watch<ColorCubit>().state.color,
         appBar: AppBar(
           title: const Text('Counter Screen'),
         ),
