@@ -1,8 +1,6 @@
 import 'dart:async';
-
 import 'package:bloc/bloc.dart';
-import 'package:demo_bloc_cubit/screens/counter_screen/cubit/counter_cubit.dart';
-import 'package:equatable/equatable.dart';
+import 'package:demo_bloc_cubit/screens/counter_screen/cubits/counter_cubit.dart';
 import 'package:flutter/material.dart';
 
 part 'color_state.dart';

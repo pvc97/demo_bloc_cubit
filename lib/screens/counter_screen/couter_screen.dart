@@ -1,5 +1,5 @@
-import 'package:demo_bloc_cubit/screens/counter_screen/cubit/color_cubit.dart';
-import 'package:demo_bloc_cubit/screens/counter_screen/cubit/counter_cubit.dart';
+import 'package:demo_bloc_cubit/screens/counter_screen/cubits/color_cubit.dart';
+import 'package:demo_bloc_cubit/screens/counter_screen/cubits/counter_cubit.dart';
 import 'package:demo_bloc_cubit/screens/other_screen/other_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,7 +16,7 @@ class _CounterScreenState extends State<CounterScreen> {
   Widget build(BuildContext context) {
     return BlocListener<CounterCubit, CounterState>(
       listener: (context, state) {
-        if (state.value == 10) {
+        if (state.value == 5) {
           showDialog(
             context: context,
             builder: (context) {
@@ -25,7 +25,7 @@ class _CounterScreenState extends State<CounterScreen> {
               );
             },
           );
-        } else if (state.value == 15) {
+        } else if (state.value == 10) {
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) => const OtherScreen(),

@@ -1,6 +1,6 @@
 part of 'counter_cubit.dart';
 
-class CounterState extends Equatable {
+class CounterState {
   final int value;
 
   const CounterState({
@@ -8,9 +8,6 @@ class CounterState extends Equatable {
   });
 
   factory CounterState.initial() => const CounterState(value: 0);
-
-  @override
-  List<Object> get props => [value];
 
   CounterState copyWith({
     int? value,

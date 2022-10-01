@@ -1,6 +1,6 @@
 part of 'color_cubit.dart';
 
-class ColorState extends Equatable {
+class ColorState {
   final Color color;
 
   const ColorState({
@@ -8,9 +8,6 @@ class ColorState extends Equatable {
   });
 
   factory ColorState.initial() => const ColorState(color: Colors.white);
-
-  @override
-  List<Object> get props => [color];
 
   ColorState copyWith({
     Color? color,

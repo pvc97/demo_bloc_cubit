@@ -1,6 +1,6 @@
 import 'package:demo_bloc_cubit/screens/counter_screen/couter_screen.dart';
-import 'package:demo_bloc_cubit/screens/counter_screen/cubit/color_cubit.dart';
-import 'package:demo_bloc_cubit/screens/counter_screen/cubit/counter_cubit.dart';
+import 'package:demo_bloc_cubit/screens/counter_screen/cubits/color_cubit.dart';
+import 'package:demo_bloc_cubit/screens/counter_screen/cubits/counter_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
